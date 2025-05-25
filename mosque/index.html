@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BSUMSA - Bishop Stuart University</title>
+    
+    <!-- Favicon links -->
+    <link rel="icon" href="imajjez/bsumsa logo.jpg" type="image/x-icon">
+    <link rel="icon" type="image/png" href="imajjez/bsumsa logo.jpg" sizes="32x32">
+    <link rel="icon" type="image/png" href="imajjez/bsumsa logo.jpg" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="imajjez/bsumsa logo.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#2E8B57">
+    
+    <style>
+        /* Your existing CSS */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nasrin Masjid - Bishop Stuart University</title>
+    <style>
+        :root {
+            --primary-green: #2E8B57;
+            --light-green: #3CB371;
+            --lighter-green: #90EE90;
+            --white: #FFFFFF;
+            --off-white: #F5F5F5;
+            --dark-gray: #333333;
+            --base-font-size: 16px;
+            --mobile-font-scale: 0.9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            font-size: var(--base-font-size);
+        }
+
+        body {
+            background-color: var(--off-white);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .logo-container img {
+            height: 60px;
+            object-fit: contain;
+            margin: 0.5rem;
+        }
+
+        nav {
+            background-color: var(--primary-green);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .nav-brand h2 {
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li {
+            margin-left: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--lighter-green);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hero {
+            position: relative;
+            height: 60vh;
+            max-height: 500px;
+            min-height: 300px;
+            overflow: hidden;
+        }
+
+        .hero-slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero-overlay h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .hero-overlay p {
+            font-size: 1rem;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-green);
+            position: relative;
+            font-size: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--light-green);
+        }
+
+        .leaders-grid, .achievements-container, .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .leader-card, .achievement-card, .event-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .leader-card {
+            cursor: pointer;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .leader-img, .achievement-img, .event-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .leader-img img, .achievement-img img, .event-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .leader-card:hover .leader-img img, 
+        .event-card:hover .event-img img {
+            transform: scale(1.05);
+        }
+
+        .leader-info, .achievement-info, .event-info {
+            padding: 1rem;
+        }
+
+        .leader-info h3, .achievement-info h3, .event-info h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .leader-info p, .achievement-info p, .event-info p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        .event-date {
+            color: var(--light-green);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .remarks {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .remarks-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .remarks h2 {
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+
+        .remarks h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--lighter-green);
+        }
+
+        .remarks p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .chairman-signature {
+            font-style: italic;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .footer-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section h3 {
+            color: var(--light-green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--white);
+            background-color: var(--primary-green);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--light-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .developer-credit {
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .developer-credit a {
+            color: var(--light-green);
+            text-decoration: none;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+            touch-action: manipulation;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 10% auto;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 90%;
+            width: 800px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 1.8rem;
+            color: var(--dark-gray);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-green);
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #f0f0f0;
+        }
+
+        /* Image gallery styles */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumbnail:hover {
+            border-color: var(--primary-green);
+        }
+
+        .gallery-thumbnail.active {
+            border-color: var(--primary-green);
+            transform: scale(1.05);
+        }
+
+        /* Slideshow controls */
+        .slideshow-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slideshow-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slideshow-dot.active {
+            background-color: var(--white);
+            transform: scale(1.2);
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            html {
+                font-size: calc(var(--base-font-size) * var(--mobile-font-scale));
+            }
+            
+            .logo-container {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            .logo-container img {
+                height: 50px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-green);
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                opacity: 0;
+            }
+
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                opacity: 1;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+
+            .hero-overlay h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-overlay p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .leaders-grid, .achievements-container, .events-container {
+                grid-template-columns: 1fr;
+            }
+
+            .leader-img, .achievement-img, .event-img {
+                height: 180px;
+            }
+
+            .modal-content {
+                margin: 20% auto;
+                padding: 1rem;
+                width: 95%;
+            }
+
+            .modal-img {
+                height: 200px;
+            }
+
+            .modal-body {
+                flex-direction: column;
+            }
+
+            .gallery-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .leaders-grid, .achievements-container, .events-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imajjez/bsumsa logo.jpg" alt="Nasrin Masjid Logo">
+            <img src="imajjez/BSUlogo.png" alt="Bishop Stuart University Logo">
+        </div>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2>BSUMSA</h2>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#leaders">Leaders</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#remarks">Chairman's Remarks</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slideshow">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img src="imajjez/clear mosque.jpg" alt="Nasrin Masjid">
+                <div class="hero-overlay">
+                    <h1>Welcome to BSUMSA</h1>
+                    <h5>(BISHOP STUART STUDENT MUSLIM ASSOCIATION)</h5>
+                    <p>The spiritual center for Muslim students at Bishop Stuart University, fostering faith, knowledge, and community.</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="imajjez/team.jpg" alt="BSUMSA Team">
+                <div class="hero-overlay">
+                    <h1>Our Dedicated Team</h1>
+                    <p>Meet the leaders who work tirelessly to serve the Muslim community at Bishop Stuart University.</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="imajjez/conecttt.jpg" alt="Community Gathering">
+                <div class="hero-overlay">
+                    <h1>Community Events</h1>
+                    <p>Join us for regular gatherings that strengthen our bonds and deepen our faith.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slideshow-controls">
+            <div class="slideshow-dot active" onclick="currentSlide(0)"></div>
+            <div class="slideshow-dot" onclick="currentSlide(1)"></div>
+            <div class="slideshow-dot" onclick="currentSlide(2)"></div>
+        </div>
+    </section>
+
+    <section id="leaders" class="section">
+        <h2 class="section-title">Our Leadership</h2>
+        <div class="leaders-grid">
+            <!-- Leader 1 -->
+            <div class="leader-card" onclick="openModal('Chairman', 'Usaama Ismael', 'Chairman of Nasrin Masjid', 'Bachelor of Journalism and Mass Media, 0741744047', ['imajjez/usaama.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/usaama.jpg" alt="Usaama Ismael">
+                </div>
+                <div class="leader-info">
+                    <h3>Usaama Ismael</h3>
+                    <p>Chairman</p>
+                </div>
+            </div>
+            
+ <!-- Leader 2 -->
+            <div class="leader-card" onclick="openModal('Patron', 'Dr Nazziwa Lukiya', 'Patron', 'Senior Lecturer. Head of Department Sci Edu, 0752536924', ['imajjez/rukia.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/rukia.jpg" alt="Kambugu Saida">
+                </div>
+                <div class="leader-info">
+                    <h3>Dr Nazziwa Lukiya</h3>
+                    <p>Patron</p>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="leader-card" onclick="openModal('Treasurer', 'Kambugu Saida', 'Treasurer', 'Bachelor of Sci in Statistics and economics, 0742463556', ['imajjez/saida.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/saida.jpg" alt="Kambugu Saida">
+                </div>
+                <div class="leader-info">
+                    <h3>Kambugu Saida</h3>
+                    <p>Treasurer</p>
+                </div>
+            </div>
+            
+            <!-- Leader 3 -->
+            <div class="leader-card" onclick="openModal('General Secretary', 'Muhangi Hassan', 'General Secretary', 'Bachelors of Industrial Art, 0761179692', ['imajjez/hassan.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/hassan.jpg" alt="Muhangi Hassan">
+                </div>
+                <div class="leader-info">
+                    <h3>Muhangi Hassan</h3>
+                    <p>General Secretary</p>
+                </div>
+            </div>
+            
+            <!-- Leader 4 -->
+            <div class="leader-card" onclick="openModal('Imam', 'Asuman Shafik', 'Imam', 'Bachelor of sci in Edu, 0775702872', ['imajjez/imam.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/imam.jpg" alt="Asuman Shafik">
+                </div>
+                <div class="leader-info">
+                    <h3>Asuman Shafik</h3>
+                    <p>Imam</p>
+                </div>
+            </div>
+            
+            <!-- Leader 5 -->
+            <div class="leader-card" onclick="openModal('Speaker', 'Aziz Oswad', 'Speaker', 'B. Social works and social Administration, 0743136020', ['imajjez/azizzz.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/azizzz.jpg" alt="Aziz Oswad">
+                </div>
+                <div class="leader-info">
+                    <h3>Aziz Oswad</h3>
+                    <p>Speaker</p>
+                </div>
+            </div>
+            
+            <!-- Additional leaders (6-15) -->
+            <div class="leader-card" onclick="openModal('Amirat for Student', 'Mukaubya Ajirat', 'Amirat for Student','Bachelors of Edu in Kiswahili,0742987784 ', ['imajjez/ajirat.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/ajirat.jpg" alt="Mukaubya Ajirat">
+                </div>
+                <div class="leader-info">
+                    <h3>Mukaumbya Ajirati</h3>
+                    <p>Amirat for Student</p>
+                </div>
+            </div>
+            
+            <div class="leader-card" onclick="openModal('Representative Computing Students', 'Kawesa Abudu Fatah', 'Representative Computing Students', 'Bachelor of computer Science, 0785171788', ['imajjez/fatah.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/fatah.jpg" alt="Kawesa Abudu Fatah">
+                </div>
+                <div class="leader-info">
+                    <h3>Kawesa Abudu Fatah</h3>
+                    <p>Representative Computing Students</p>
+                </div>
+            </div>
+            
+            <div class="leader-card" onclick="openModal('Weekend prog. Student representative', 'Agondeze Umar', 'Weekend prog. Student representative', 'B. Social works and social Administration, 0782770084.', ['imajjez/umr.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/umr.jpg" alt="Agondeze Umar">
+                </div>
+                <div class="leader-info">
+                    <h3>Agondeze Umar</h3>
+                    <p>Weekend prog. Student representative</p>
+                </div>
+            </div>
+            
+            <div class="leader-card" onclick="openModal('Assistant Amirat', 'Hanifah Nyakato', 'Assistant Amirat', 'Bachelor degree in Edu Literature English, 0701425868.', ['imajjez/hanifah.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/hanifah.jpg" alt="Hanifah Nyakato">
+                </div>
+                <div class="leader-info">
+                    <h3>Hanifah Nyakato</h3>
+                    <p>Assistant Amirat</p>
+                </div>
+            </div>
+            
+            <div class="leader-card" onclick="openModal('councillor', 'Hon Abasi Mpamize Agaba', 'councillor', 'senior official, 0701405851.', ['imajjez/agaba.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/agaba.jpg" alt="Hon Abasi Mpamize Agaba">
+                </div>
+                <div class="leader-info">
+                    <h3>Hon Abasi Mpamize Agaba</h3>
+                    <p>councillor</p>
+                </div>
+            </div>
+            
+            <div class="leader-card" onclick="openModal('Publicity Secretary', 'Nuwabine Isaac', 'Publicity Secretary', 'Bachelor of Agri Business Management and Community Development, 0781209794.', ['imajjez/isa.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/isa.jpg" alt="Nuwabine Isaac">
+                </div>
+                <div class="leader-info">
+                    <h3>Nuwabine Isa</h3>
+                    <p>Publicity Secretary</p>
+                </div>
+            </div>
+            
+            <div class="leader-card" onclick="openModal('Assistant Amir Dawah', 'Walid Adinan', 'Assistant Amir Dawah', 'Bachelors of sci Edu, 0708073055.', ['imajjez/waleed.jpg'])">
+                <div class="leader-img">
+                    <img src="imajjez/waleed.jpg" alt="Walid Adinan">
+                </div>
+                <div class="leader-info">
+                    <h3>Waleed Adnan</h3>
+                    <p>Assistant Amir Dawah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="section">
+        <h2 class="section-title">Our Achievements</h2>
+        <div class="achievements-container">
+            <!-- Achievement 1 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/cameraaa.jpg" alt="Security Cameras">
+                </div>
+                <div class="achievement-info">
+                    <h3>Installation of Security Cameras</h3>
+                    <p>We've successfully installed state-of-the-art security cameras around the mosque premises to ensure the safety of all worshippers.</p>
+                </div>
+            </div>
+            
+            <!-- Achievement 2 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/kitchen.jpg" alt="New Kitchen">
+                </div>
+                <div class="achievement-info">
+                    <h3>Construction of New Kitchen</h3>
+                    <p>A modern kitchen facility has been built to support our community events and provide meals during special occasions like Ramadan.</p>
+                </div>
+            </div>
+            
+            <!-- Achievement 3 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/mat.jpg" alt="Door Mats">
+                </div>
+                <div class="achievement-info">
+                    <h3>Purchase of Quality Door Mats</h3>
+                    <p>New, high-quality door mats have been acquired to maintain cleanliness in the mosque and provide a welcoming entrance.</p>
+                </div>
+            </div>
+            
+            <!-- Achievement 4 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/team.jpg" alt="Leadership Team">
+                </div>
+                <div class="achievement-info">
+                    <h3>Stabilization of Leadership</h3>
+                    <p>We've established a stable and effective leadership structure that ensures smooth operations and continuous improvement.</p>
+                </div>
+            </div>
+            
+            <!-- Achievement 5 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/jersey.jpg" alt="jersey">
+                </div>
+                <div class="achievement-info">
+                    <h3>We introduced in our BSUMSA Jersey</h3>
+                    <p> This unifies us in aspects like sports gallas, friendly matches.<b>And each one is to be purchased at a cost of shs 30000</b></p>
+                </div>
+            </div>
+
+            <!-- Achievement 6 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/tankk.jpg" alt="water tanks">
+                </div>
+                <div class="achievement-info">
+                    <h3>Installation of Water tank</h3>
+                    <p>We installed two water tanks at our mosque to make it easy for worshippers to maintain hygiene and offering water reflects the mosque's welcoming nature.</p>
+                </div>
+            </div>
+
+            <!-- Achievement 6 -->
+            <div class="achievement-card">
+                <div class="achievement-img">
+                    <img src="imajjez/community.jpg" alt="Community Events">
+                </div>
+                <div class="achievement-info">
+                    <h3>Organization of Community Events</h3>
+                    <p>Regular community events have been organized to strengthen bonds among Muslim students and promote Islamic values.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <h2 class="section-title">Upcoming & Past Events</h2>
+        <div class="events-container">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/conecttt.jpg" alt="Community Gathering">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">19th April 2025</span>
+                    <h3>BSU MUSLIM STUDENTS CONNECT</h3>
+                    <p>A special gathering to strengthen brotherhood and sisterhood among Muslim students at BSU.</p>
+                </div>
+            </div>
+            
+            <!-- Event 2 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/qrn compt.jpg" alt="Quran Competition">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">Coming Soon</span>
+                    <h3>Annual Quran Competition</h3>
+                    <p>Test your memorization and recitation skills in our prestigious Quran competition with valuable prizes.</p>
+                </div>
+            </div>
+            
+            <!-- Event 3 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/trip.jpg" alt="Trip to Kigali">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">August 2025</span>
+                    <h3>Educational Trip to Kigali</h3>
+                    <p>Join us for an enlightening trip to Kigali to visit Islamic centers and historical sites.</p>
+                </div>
+            </div>
+            
+            <!-- Event 4 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/freshers.jpg" alt="welcoming freshers">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">coming soon</span>
+                    <h3>Welcoming Freshers</h3>
+                    <p>We alway welcome our new students, we guide them to keep in line with Islam.</p>
+                </div>
+            </div>
+
+          
+            
+            <!-- Event 5 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/qadhi run.jpg" alt="Qadhi run">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">Every year</span>
+                    <h3>Annual Qadhi Run</h3>
+                    <p> Our team always participates in Qadhi run in order to honner and support Islamic activities</p>
+                </div>
+            </div>
+
+ <!-- Event 5 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/chaplincy.jpg" alt="Qadhi run">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">Every year</span>
+                    <h3>Certificatin of the  chaplaincy</h3>
+                    <p> Our team always strengthen bonds with our university leaders, and we really appreciate their unwavering support to our activities</p>
+                </div>
+            </div>
+
+ <!-- Event 5 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/handover.jpg" alt="Qadhi run">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">coming soon</span>
+                    <h3>Handover Celemony</h3>
+                    <p> Leaders who have been serving for the previous period, they handover to new leaders so as they bring in new ideas</p>
+                </div>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="imajjez/ramathan.jpg" alt="Ramadan Futari">
+                </div>
+                <div class="event-info">
+                    <span class="event-date">Next Ramadan</span>
+                    <h3>Ramadan Futari Program</h3>
+                    <p>Daily iftar meals and special programs during the blessed month of Ramadan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="remarks" class="remarks">
+        <div class="remarks-container">
+            <h2>Chairman's Remarks</h2>
+            <p>Dear brothers and sisters in Islam,</p>
+            <p>It is with great pleasure and gratitude to Allah that I address you today as we continue our journey of faith and service at Nasrin Masjid. Our mosque has grown tremendously over the past year, thanks to your unwavering support and dedication.</p>
+            <p>We have achieved significant milestones, from improving our physical infrastructure to strengthening our community bonds. The installation of security cameras, construction of a new kitchen, and organization of various educational and social events are testaments to what we can accomplish when we work together with sincerity and unity.</p>
+            <p>As we look to the future, I encourage all students to actively participate in our programs and initiatives. Your involvement is crucial to maintaining the vibrant Islamic environment we've cultivated at Bishop Stuart University. Let us continue to support one another in righteousness and piety, and may Allah accept all our efforts.</p>
+            <p class="chairman-signature">Usaama Ismael<br>Chairman, BSUMSA</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Nasrin Masjid</h3>
+                <p>Nasrin Masjid serves as the spiritual center for Muslim students at Bishop Stuart University, providing prayer facilities, Islamic education, and community services.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#leaders" style="color: var(--white); text-decoration: none;">Our Leaders</a></p>
+                <p><a href="#achievements" style="color: var(--white); text-decoration: none;">Achievements</a></p>
+                <p><a href="#events" style="color: var(--white); text-decoration: none;">Events</a></p>
+                <p><a href="#remarks" style="color: var(--white); text-decoration: none;">Chairman's Remarks</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact & Location</h3>
+                <p>bsumsa, Bishop Stuart University</p>
+                <p>Mbarara, Uganda</p>
+                <p>Email: bsumsa.communitywebsite.org</p>
+                <p>Phone: +256 741 744 047</p>
+                <p><a href="https://chat.whatsapp.com/EaLOEiplX7a6uQXZlUSDLb" style="color: var(--light-green); text-decoration: none;">Join Our WhatsApp Group</a></p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 BSUMSA - Bishop Stuart University. All Rights Reserved.</p>
+            <div class="developer-credit">
+                                <p>Developed by <a href="#">Fatah</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="leaderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img id="modalLeaderImg" src="" alt="Leader Image">
+                </div>
+                <div>
+                    <h2 id="modalLeaderName"></h2>
+                    <h3 id="modalLeaderTitle" style="color: var(--primary-green);"></h3>
+                    <p id="modalLeaderBio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            
+            // Animate hamburger to X
+            hamburger.classList.toggle('active');
+        }
+
+        // Modal functionality
+        function openModal(title, name, position, bio, imgSrc) {
+            document.getElementById('modalLeaderName').textContent = name;
+            document.getElementById('modalLeaderTitle').textContent = position;
+            document.getElementById('modalLeaderBio').textContent = bio;
+            document.getElementById('modalLeaderImg').src = imgSrc;
+            document.getElementById('modalLeaderImg').alt = name;
+            document.getElementById('leaderModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        function closeModal() {
+            document.getElementById('leaderModal').style.display = 'none';
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('leaderModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Make sure all images have alt attributes
+        document.querySelectorAll('img').forEach(img => {
+            if (!img.alt) {
+                img.alt = '';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
