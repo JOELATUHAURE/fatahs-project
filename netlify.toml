@@ -1,0 +1,9 @@
+# Netlify configuration file to handle redirects and prevent 404 errors
+# This rule will serve mosque/index.html for all routes
+[build]
+  publish = "mosque"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
